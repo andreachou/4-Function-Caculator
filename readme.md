@@ -1,6 +1,19 @@
 # 4 Function Calculator
 
-- web fundmentals
+<strong><em>Topic: web fundmentals</em></strong>
+
+<br/>
+
+<div style="color:grey">
+<p>Status as of 1/20/2023<p>
+  <ul>
+    <li>need to deal with dicimal</li>
+    <li>need to deal with multi-digit number</li>
+    <li>need to deal with 3 items but the middle is not an operator</li>
+  </ul>
+</div>
+
+<br/>
 
 Using what we've learned about:
 
