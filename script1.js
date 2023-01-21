@@ -1,8 +1,9 @@
 var displayDiv = document.querySelector("#display");
 
-// var numArray = [];
-// var resultArray = [];
 var currentDisplayNum = ""
+var operatorArray = [];  // store operator user input
+
+var decimalCount = 0;
 
 var result = 0;
 
@@ -10,16 +11,25 @@ var inputNumber = false;
 
 function press(element) {
     var displayNum = element;
-    currentDisplayNum += displayNum  //concate numbers to have multi-digit number
-    console.log("current display: num:", currentDisplayNum);
-    console.log("display: num:", displayNum);
+    // counting decimals
+    if(displayNum === "." && decimalCount < 1 ){
+        decimalCount ++;
+    }
+    else if(displayNum === "." && decimalCount >= 1){
+        displayNum = "";
+    }
+    console.log("display num:", displayNum)
+    console.log("Decimal Count:", decimalCount)
+    currentDisplayNum += displayNum //concate numbers to have multi-digit number
     displayDiv.innerText = currentDisplayNum;
+    // console.log(typeof currentDisplayNum);
+    return currentDisplayNum
 }
 
 function setOP(operator) {
-    // displayDiv.innerText = operator;
-    resultArray.push(operator);
-    console.log("operator:", resultArray);
+    displayDiv.innerText = operator;
+    operatorArray.push(operator);
+    console.log("operator:", operatorArray);
 }
 
 function calculate() {
