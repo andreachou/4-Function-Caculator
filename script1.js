@@ -1,14 +1,19 @@
 var displayDiv = document.querySelector("#display");
 
 // var numArray = [];
-var resultArray = [];
+// var resultArray = [];
+var currentDisplayNum = ""
 
 var result = 0;
 
+var inputNumber = false;
+
 function press(element) {
-    displayDiv.innerText = element;
-    resultArray.push(element);
-    console.log("num:", resultArray);
+    var displayNum = element;
+    currentDisplayNum += displayNum  //concate numbers to have multi-digit number
+    console.log("current display: num:", currentDisplayNum);
+    console.log("display: num:", displayNum);
+    displayDiv.innerText = currentDisplayNum;
 }
 
 function setOP(operator) {
@@ -39,10 +44,9 @@ function calculate() {
 }
 
 function clr(){
-    resultArray = [];
+    currentDisplayNum = "";
     displayDiv.innerText = 0;
 }
 
  // need to deal with dicimal
- // need to deal with multi-digit number
 // need to deal with 3 items but the middle is not an operator
