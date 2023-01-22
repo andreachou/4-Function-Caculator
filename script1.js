@@ -11,7 +11,7 @@ var inputNumber = false;
 
 function press(element) {
     var displayNum = element;
-    // counting decimals
+    // counting decimals that only 1 decimal will be added
     if(displayNum === "." && decimalCount < 1 ){
         decimalCount ++;
     }
@@ -22,7 +22,7 @@ function press(element) {
     console.log("Decimal Count:", decimalCount)
     currentDisplayNum += displayNum //concate numbers to have multi-digit number
     displayDiv.innerText = currentDisplayNum;
-    // console.log(typeof currentDisplayNum);
+    console.log(typeof currentDisplayNum);  // need to deal with data type. current data type is string
     return currentDisplayNum
 }
 
@@ -32,31 +32,34 @@ function setOP(operator) {
     console.log("operator:", operatorArray);
 }
 
-function calculate() {
-    if (resultArray.length != 3) {
-        displayDiv.innerText = 0;
-    }
-    else {
-        if (resultArray[1] == '/') {
-            result = resultArray[0] / resultArray[2]
-        }
-        else if (resultArray[1] == '*') {
-            result = resultArray[0] * resultArray[2]
-        }
-        else if (resultArray[1] == '+') {
-            result = resultArray[0] + resultArray[2]
-        }
-        else if (resultArray[1] == '-') {
-            result = resultArray[0] - resultArray[2]
-        }
-        displayDiv.innerText = result;
-    }
-}
+// the following codes need to to be updated
+
+// function calculate() {
+//     if (resultArray.length != 3) {
+//         displayDiv.innerText = 0;
+//     }
+//     else {
+//         if (resultArray[1] == '/') {
+//             result = resultArray[0] / resultArray[2]
+//         }
+//         else if (resultArray[1] == '*') {
+//             result = resultArray[0] * resultArray[2]
+//         }
+//         else if (resultArray[1] == '+') {
+//             result = resultArray[0] + resultArray[2]
+//         }
+//         else if (resultArray[1] == '-') {
+//             result = resultArray[0] - resultArray[2]
+//         }
+//         displayDiv.innerText = result;
+//     }
+// }
 
 function clr(){
     currentDisplayNum = "";
     displayDiv.innerText = 0;
 }
 
- // need to deal with dicimal
-// need to deal with 3 items but the middle is not an operator
+// need to deal with:
+// data type for user input
+// calculation

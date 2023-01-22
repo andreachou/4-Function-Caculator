@@ -5,11 +5,19 @@
 <br/>
 
 <div style="color:grey">
-<p>Status as of 1/20/2023<p>
+<p>Status as of 1/20/2023 for script.js<p>
   <ul>
     <li>need to deal with dicimal</li>
     <li>need to deal with multi-digit number</li>
     <li>need to deal with 3 items but the middle is not an operator</li>
+  </ul>
+</div>
+
+<div style="color:grey">
+<p>Status as of 1/21/2023 for script1.js<p>
+  <ul>
+    <li>convert data type to number to do calculate</li>
+    <li>need to deal with calculation</li>
   </ul>
 </div>
 
